@@ -1,77 +1,106 @@
-import {
-  AmbientLight,
-  BoxGeometry,
-  OBJLoader,
-  Scene,
-  Mesh,
-  MeshBasicMaterial,
-  PerspectiveCamera,
-  WebGLRenderer,
-  Color
-} from 'three-full';
+import * as THREE from "three-full";
 
-window.onload = init;
+window.onload = () => {
+  init();
+  animate();
+};
 
-let cube, renderer, scene, camera, loader, geometry, material;
+let renderer,
+  scene,
+  camera,
+  mtlLoader,
+  objLoader,
+  mouseX = 0,
+  mouseY = 0, 
+  mesh,
+  windowHalfX = window.innerWidth / 2,
+  windowHalfY = window.innerHeight / 2;
 
 function init() {
-  loader = new OBJLoader();
+  setupScene();
+  setupCamera();
+  setupRenderer();
+  addLight();
+  mtlLoad();
+}
 
-  scene = new Scene();
-  scene.background = new Color(0xffffff);
-  camera = new PerspectiveCamera(
-    75,
+function setupScene() {
+  scene = new THREE.Scene();
+  scene.background = new THREE.Color(0xffffff);
+}
+
+function setupCamera() {
+  camera = new THREE.PerspectiveCamera(
+    35,
     window.innerWidth / window.innerHeight,
-    0.1,
+    1,
     1000
   );
+  camera.position.set(4.5, 9, 5);
+}
 
-  renderer = new WebGLRenderer();
+function setupRenderer() {
+  renderer = new THREE.WebGLRenderer();
+  renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
   document.body.appendChild(renderer.domElement);
 
-  // addCube();
-  addModel();
-  // addLight();
-  camera.position.z = 5;
-  animate();
+  document.addEventListener("mousemove", onDocumentMouseMove, false);
 }
 
-function animate() {
-  requestAnimationFrame(animate);
-  // cube.rotation.x += 0.01;
-  // cube.rotation.y += 0.01;
-  renderer.render(scene, camera);
+function onDocumentMouseMove(event) {
+  mouseX = (event.clientX - windowHalfX) / 2;
+  mouseY = (event.clientY - windowHalfY) / 2;
 }
 
-function addCube() {
-  geometry = new BoxGeometry(1, 1, 1);
-  material = new MeshBasicMaterial({ color: 0x00ff00 });
-  cube = new Mesh(geometry, material);
-  scene.add(cube);
+function mtlLoad() {
+  mtlLoader = new THREE.MTLLoader();
+  mtlLoader
+    .setPath("http://localhost:9000/assets/")
+    .load("bathroom.mtl", mtlLoadedCb, null, errorCb);
 }
 
-function addModel() {
-  loader.load(
-    // resource URL
-    'assets/untitled.obj',
-    // called when resource is loaded
-    function(object) {
-      scene.add(object);
-      addLight()
-    },
-    // called when loading is in progresses
-    function(xhr) {
-      console.log((xhr.loaded / xhr.total) * 100 + '% loaded');
-    },
-    // called when loading has errors
-    function(error) {
-      console.log('An error happened');
-    }
-  );
+function mtlLoadedCb(materials) {
+  materials.preload();
+
+  objLoader = new THREE.OBJLoader();
+  objLoader.setMaterials(materials);
+  objLoader.setPath("http://localhost:9000/assets/");
+  objLoader.load("bathroom.obj", objLoadedCb, null, errorCb);
+}
+
+function objLoadedCb(obj) {
+  mesh = obj;
+
+  mesh.rotation.set(1.3, 3.6, 4.8);
+
+  scene.add(mesh);
+}
+
+function errorCb(error) {
+  console.log("error", errorCb);
 }
 
 function addLight() {
-  var light = new AmbientLight(0x404040); // soft white light
+  var light = new THREE.AmbientLight(0x404040, 1); // soft white light
   scene.add(light);
+
+  var pointLight = new THREE.PointLight( 0xffffff, 0.8 );
+  camera.add( pointLight );
+
+  scene.add(camera);
+}
+
+
+function animate() {
+  requestAnimationFrame( animate );
+  render();
+}
+function render() {
+
+  // camera.position.x += ( mouseX - camera.position.x ) * .05;
+  // camera.position.y += ( - mouseY - camera.position.y ) * .05;
+
+  camera.lookAt( scene.position );
+  renderer.render( scene, camera );
 }

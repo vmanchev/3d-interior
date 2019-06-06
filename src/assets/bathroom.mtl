@@ -1,0 +1,199 @@
+﻿
+newmtl Material~0
+Kd 0.7 0.7 0.7 
+Ka 0 0 0 
+Ks 0 0 0 
+d 1
+
+newmtl Vonios plyt 2
+Kd 1 1 1 
+Ka 0.5 0.5 0.5 
+Ks 0.5 0.5 0.5 
+d 1
+map_Kd textures/Vonios_plyt_2.jpg
+
+newmtl Vonios plyt 1
+Kd 1 1 1 
+Ka 0.5 0.5 0.5 
+Ks 0.5 0.5 0.5 
+d 1
+map_Kd textures/Vonios_plyt_1.jpg
+
+newmtl DefaultMaterial~1
+Kd 0.9 0.9 0.9 
+Ka 0.6 0.6 0.6 
+Ks 0.25 0.25 0.25 
+d 1
+
+newmtl Vonios baldas
+Kd 0.94902 0.94902 0.94902 
+Ka 0.47451 0.47451 0.47451 
+Ks 0.47451 0.47451 0.47451 
+d 1
+
+newmtl Lango remas
+Kd 0.956863 0.956863 0.956863 
+Ka 0.478431 0.478431 0.478431 
+Ks 0.478431 0.478431 0.478431 
+d 1
+
+newmtl Lango stiklas
+Kd 0 0 0 
+Ka 0 0 0 
+Ks 0 0 0 
+d 0
+
+newmtl Vonios keramika
+Kd 1 1 1 
+Ka 0.5 0.5 0.5 
+Ks 0.5 0.5 0.5 
+d 1
+
+newmtl Kranu cromas
+Kd 0.513725 0.54902 0.564706 
+Ka 0.256863 0.27451 0.282353 
+Ks 0.256863 0.27451 0.282353 
+d 1
+
+newmtl Tualetinis popierius
+Kd 1 1 1 
+Ka 0.5 0.5 0.5 
+Ks 0.5 0.5 0.5 
+d 1
+map_Kd textures/Tualetinis_popierius.jpg
+
+newmtl Duso plastikas
+Kd 0.203922 0.203922 0.203922 
+Ka 0.101961 0.101961 0.101961 
+Ks 0.101961 0.101961 0.101961 
+d 1
+
+newmtl Zvakides aliuminis
+Kd 0.647059 0.666667 0.682353 
+Ka 0.323529 0.333333 0.341176 
+Ks 0.323529 0.333333 0.341176 
+d 1
+
+newmtl Zvakides vaskas
+Kd 0.901961 0.886275 0.819608 
+Ka 0.45098 0.443137 0.409804 
+Ks 0.45098 0.443137 0.409804 
+d 1
+
+newmtl Zvakides knutas
+Kd 0.227451 0.227451 0.227451 
+Ka 0.113725 0.113725 0.113725 
+Ks 0.113725 0.113725 0.113725 
+d 1
+
+newmtl Zvakides keramika
+Kd 0.94902 0.941176 0.913725 
+Ka 0.47451 0.470588 0.456863 
+Ks 0.47451 0.470588 0.456863 
+d 1
+
+newmtl Romanetes medziaga
+Kd 1 1 1 
+Ka 0.5 0.5 0.5 
+Ks 0.5 0.5 0.5 
+d 1
+map_Kd textures/Romanetes_medziaga.jpg
+
+newmtl Roamnetes persvieciama
+Kd 1 1 1 
+Ka 0.5 0.5 0.5 
+Ks 0.5 0.5 0.5 
+d 0.45
+map_Kd textures/Roamnetes_persvieciama.jpg
+
+newmtl Romanetes plastikas
+Kd 0.937255 0.937255 0.937255 
+Ka 0.468627 0.468627 0.468627 
+Ks 0.468627 0.468627 0.468627 
+d 1
+
+newmtl Sienos
+Kd 1 1 1 
+Ka 0.5 0.5 0.5 
+Ks 0.5 0.5 0.5 
+d 1
+
+newmtl Grindys
+Kd 0.929412 0.909804 0.866667 
+Ka 0.464706 0.454902 0.433333 
+Ks 0.464706 0.454902 0.433333 
+d 1
+
+newmtl Veidrodis
+Kd 0.109804 0.109804 0.109804 
+Ka 0.054902 0.054902 0.054902 
+Ks 0.054902 0.054902 0.054902 
+d 1
+
+newmtl Ledas
+Kd 1 1 1 
+Ka 0.5 0.5 0.5 
+Ks 0.5 0.5 0.5 
+d 1
+
+newmtl Duso kabinos plastikas
+Kd 0.647059 0.666667 0.682353 
+Ka 0.323529 0.333333 0.341176 
+Ks 0.323529 0.333333 0.341176 
+d 1
+
+newmtl Rozetes
+Kd 0.94902 0.94902 0.94902 
+Ka 0.47451 0.47451 0.47451 
+Ks 0.47451 0.47451 0.47451 
+d 1
+
+newmtl wc plastikas
+Kd 1 1 1 
+Ka 0.5 0.5 0.5 
+Ks 0.5 0.5 0.5 
+d 1
+
+newmtl Duso zarna
+Kd 0.647059 0.666667 0.682353 
+Ka 0.323529 0.333333 0.341176 
+Ks 0.323529 0.333333 0.341176 
+d 1
+
+newmtl Lubos
+Kd 1 1 1 
+Ka 0.5 0.5 0.5 
+Ks 0.5 0.5 0.5 
+d 1
+
+newmtl DefaultMaterial
+Kd 1 1 1 
+Ka 0.5 0.5 0.5 
+Ks 0.5 0.5 0.5 
+d 1
+map_Kd textures/DefaultMaterial.jpg
+
+newmtl Lubu ledas
+Kd 1 1 1 
+Ka 0.5 0.5 0.5 
+Ks 0.5 0.5 0.5 
+d 1
+
+newmtl Ranksluostis
+Kd 1 1 1 
+Ka 0.5 0.5 0.5 
+Ks 0.5 0.5 0.5 
+d 1
+map_Kd textures/Ranksluostis.jpg
+
+newmtl Duso kabina
+Kd 0 0 0 
+Ka 0 0 0 
+Ks 0 0 0 
+d 0
+
+newmtl Duso rankenele
+Kd 0.513725 0.54902 0.564706 
+Ka 0.256863 0.27451 0.282353 
+Ks 0.256863 0.27451 0.282353 
+d 1
